@@ -6,13 +6,14 @@ import CountryDetailPage from "./pages/CountryDetailPage";
 import BucketListPage from "./pages/BucketListPage";
 import AboutPage from "./pages/AboutPage";
 import NotFoundPage from "./pages/NotFoundPage";
+import CountriesLayout from "./components/CountriesLayout";
 
 const App = () => {
  return (
   <Routes>
     <Route path="/" element={<Layout />}>
       <Route index element={<HomePage />} />
-        <Route path="countries">
+        <Route path="countries" element={<CountriesLayout />}>
           <Route index element={<CountriesPage />} />
             <Route path=":countryCode" element={<CountryDetailPage />} />
           </Route>
